@@ -168,7 +168,7 @@
             <!-- BOX INFO WITH NUMBER COUNT-UP ANIMATION -->
 
 <!-- BOX INFO WITH NUMBER COUNT-UP ANIMATION -->
-<ul class="box-info grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<ul class="box-info grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <li class="flex items-center">
         <i class='bx bxs-wrench text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for No of Interruptions -->
         <span class="text ml-4">
@@ -183,7 +183,7 @@
             <p class="text-sm sm:text-base lg:text-lg">Diagnostic Progress</p>
         </span>
     </li>
-    <li class="flex items-center">
+    <li class="flex items-center lg:col-span-1">
         <i class='bx bxs-cog text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for Work in Progress -->
         <span class="text ml-4">
             <h3 id="workInProgress" class="text-xl sm:text-2xl lg:text-3xl font-bold">0</h3>
@@ -192,7 +192,7 @@
     </li>
 </ul>
 
-<ul class="box-info grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+<ul class="box-info grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
     <li class="flex items-center">
         <i class='bx bxs-check-circle text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for System Availability -->
         <span class="text ml-4">
@@ -208,7 +208,7 @@
         </span>
     </li>
 </ul>
-</main></section>
+
 <script type="text/javascript">
     function animateCounter(id, start, end, duration) {
         const element = document.getElementById(id);
