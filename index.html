@@ -168,48 +168,47 @@
             <!-- BOX INFO WITH NUMBER COUNT-UP ANIMATION -->
 
 <!-- BOX INFO WITH NUMBER COUNT-UP ANIMATION -->
-<ul class="box-info">
-    <li>
-        <i class='bx bxs-wrench'></i> <!-- Icon for No of Interruptions -->
-        <span class="text">
-            <h3 id="interruptions">0</h3>
-            <p>No of Interruptions</p>
+<ul class="box-info grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <li class="flex items-center">
+        <i class='bx bxs-wrench text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for No of Interruptions -->
+        <span class="text ml-4">
+            <h3 id="interruptions" class="text-xl sm:text-2xl lg:text-3xl font-bold">0</h3>
+            <p class="text-sm sm:text-base lg:text-lg">No of Interruptions</p>
         </span>
     </li>
-    <li>
-        <i class='bx bxs-analyse'></i> <!-- Icon for Diagnostic Progress -->
-        <span class="text">
-            <h3 id="diagnosticProgress">0%</h3>
-            <p>Diagnostic Progress</p>
+    <li class="flex items-center">
+        <i class='bx bxs-analyse text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for Diagnostic Progress -->
+        <span class="text ml-4">
+            <h3 id="diagnosticProgress" class="text-xl sm:text-2xl lg:text-3xl font-bold">0%</h3>
+            <p class="text-sm sm:text-base lg:text-lg">Diagnostic Progress</p>
         </span>
     </li>
-     <li>
-        <i class='bx bxs-cog'></i> <!-- Icon for Work in Progress -->
-        <span class="text">
-            <h3 id="workInProgress">0</h3>
-            <p>Work in Progress</p>
-        </span>
-    </li>
-   
-</ul>
-
-<ul class="box-info">
-    <li>
-        <i class='bx bxs-check-circle bg-li'></i> <!-- Icon for System Availability -->
-        <span class="text">
-            <h3 id="systemAvailability">0%</h3>
-            <p>System Availability</p>
-        </span>
-    </li>
-<li>
-        <i class='bx bxs-hourglass'></i> <!-- Icon for ELR Carried Out -->
-        <span class="text">
-            <h3 id="elr">0</h3>
-            <p>ELR Carried Out in Current Month (Hours)</p>
+    <li class="flex items-center">
+        <i class='bx bxs-cog text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for Work in Progress -->
+        <span class="text ml-4">
+            <h3 id="workInProgress" class="text-xl sm:text-2xl lg:text-3xl font-bold">0</h3>
+            <p class="text-sm sm:text-base lg:text-lg">Work in Progress</p>
         </span>
     </li>
 </ul>
 
+<ul class="box-info grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+    <li class="flex items-center">
+        <i class='bx bxs-check-circle text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for System Availability -->
+        <span class="text ml-4">
+            <h3 id="systemAvailability" class="text-xl sm:text-2xl lg:text-3xl font-bold">0%</h3>
+            <p class="text-sm sm:text-base lg:text-lg">System Availability</p>
+        </span>
+    </li>
+    <li class="flex items-center">
+        <i class='bx bxs-hourglass text-4xl sm:text-5xl lg:text-6xl'></i> <!-- Icon for ELR Carried Out -->
+        <span class="text ml-4">
+            <h3 id="elr" class="text-xl sm:text-2xl lg:text-3xl font-bold">0</h3>
+            <p class="text-sm sm:text-base lg:text-lg">ELR Carried Out in Current Month (Hours)</p>
+        </span>
+    </li>
+</ul>
+</main></section>
 <script type="text/javascript">
     function animateCounter(id, start, end, duration) {
         const element = document.getElementById(id);
@@ -217,7 +216,7 @@
         const range = end - start;
         const increment = end > start ? 1 : -1;
         const stepTime = Math.abs(Math.floor(duration / range));
-        
+
         const timer = setInterval(() => {
             current += increment;
             element.innerText = current + (id === 'diagnosticProgress' || id === 'systemAvailability' ? '%' : '');
@@ -236,9 +235,6 @@
         animateCounter('elr', 0, 60, 2000);                    // Animate from 0 to 60 hours in 2 seconds
     });
 </script>
-           
-    </main>
-  </section>
 
   <script src="script.js"></script>
 
