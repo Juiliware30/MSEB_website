@@ -11,10 +11,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>High Priority</title>
+  <title>Major Interruptions</title>
   <style>
+    
     /* Overlay to cover the screen */
-     /* Overlay to cover the screen */
     .overlay {
       display: none;
       position: fixed;
@@ -135,7 +135,7 @@
 </head>
 
 <body>
-  <!-- SIDEBAR -->
+ <!-- SIDEBAR -->
    <section id="sidebar">
     <a href="#" class="brand">
         <i class='bx bxs-power'></i>
@@ -143,7 +143,7 @@
     </a>
     <ul class="side-menu top">
         <li class="active">
-            <a href="index.html">
+            <a href="#">
                 <i class='bx bxs-dashboard' style="font-weight: bold;"></i>
                 <span class="text">Dashboard</span>
             </a>
@@ -226,38 +226,27 @@
           <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
         </div>
       </form>
-     
-    <!-- Dropdown Menu -->
-   <div class="relative">
-    <a href="#" class="profile flex items-center">
-        <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
-            <i class="bx bxs-user text-2xl text-white"></i>
-        </div>
-        <span class="ml-2 font-semibold text-gray-800"></span>
-    </a>
-    <!-- Dropdown Menu -->
-   <div class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-lg hidden" id="userDropdown">
-    <div class="px-4 py-2 border-b flex items-center">
-        <img src="login.jpg" alt="Logo" class="w-8 h-8 rounded-full mr-2"> <!-- Ensure the path is correct -->
-        <div>
-            <!-- <span class="font-bold">Username</span> -->
-            <span class="text-sm text-gray-500 block">MAHATRANSCO</span>
+      <a href="#" class="notification"><i class="bx bxs-bell"></i><span class="num">0</span></a>
+      <div class="relative">
+        <a href="#" class="profile">
+            <i class="bx bxs-user text-2xl"></i>
+        </a>
+        <!-- Dropdown Menu -->
+        <div class="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded shadow-lg hidden" id="userDropdown">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex items-center">
+                <i class="bx bx-user text-gray-600 mr-2"></i>
+                <span>Username</span>
+            </a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex items-center">
+                <i class="bx bx-log-out text-gray-600 mr-2"></i>
+                <span>Logout</span>
+            </a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex items-center">
+                <i class="bx bx-cog text-gray-600 mr-2"></i>
+                <span>Settings</span>
+            </a>
         </div>
     </div>
-     <a href="#" class="block px-4 py-2 border-b hover:bg-gray-200 flex items-center">
-            <i class="bx bx-user text-gray-600 mr-2"></i>
-            <span>Profile</span>
-        </a>
-        <a href="#" class="block px-4 py-2 border-b hover:bg-gray-200 flex items-center">
-            <i class="bx bx-cog text-gray-600 mr-2"></i>
-            <span>Settings</span>
-        </a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex items-center">
-            <i class="bx bx-log-out text-gray-600 mr-2"></i>
-            <span>Logout</span>
-        </a>
-    </div>
-</div>
 
     </nav>
     <script type="text/javascript">
@@ -278,182 +267,158 @@
     });
 });
 </script>
-
-  <main>
+    <main class="bg-white" style="background-color: white;">
       <header class="main-header flex flex-col sm:flex-row sm:justify-between sm:items-center p-4 shadow-lg rounded-lg space-y-2 sm:space-y-0">
-  <h1 class="text-lg sm:text-xl font-bold text-center sm:text-left">High Priority</h1>
-  <button class="btn btn-primary add-new-button w-full sm:w-auto text-center sm:text-right" onclick="openPopup()">Add New Scheme Information</button>
+  <h1 class="text-lg sm:text-xl font-bold text-center sm:text-left">Major Interruptions</h1>
+  <button class="btn btn-primary add-new-button w-full sm:w-auto text-center sm:text-right" onclick="openPopup()">Add New Major Interruptions</button>
 </header>
 
-     <div class="overlay" id="overlay">
-  <div class="popup-form" id="popupForm">
-    <button class="popup-close-button" onclick="closePopup()">×</button>
-    <form id="customerForm">
-      <h2 class="mb-4">Add New Scheme Information</h2>
+      <div class="overlay" id="overlay">
+        <div class="popup-form" id="popupForm">
+          <button class="popup-close-button" onclick="closePopup()">×</button>
+          <form id="customerForm">
+            <h2 class="mb-4">Add New Major Interruptions</h2>
 
-      <div class="row">
-        <div class="col-12">
-          <div class="form-group row">
-            <div class="col-6">
-              <label for="description">Description<span style="color:red">*</span></label>
-              <input type="text" id="description" name="description" class="form-control" required>
-            </div>
-            <div class="col-6">
-              <label for="schemeSanctionNo">Scheme Sanction No.</label>
-              <input type="text" id="schemeSanctionNo" name="schemeSanctionNo" class="form-control" required>
-            </div>
-          </div>
-        </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="description">Description<span style="color:red">*</span></label>
+                  <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+                </div>
+              </div>
 
-        <div class="col-12">
-          <div class="form-group row">
-            <div class="col-6">
-              <label for="schemeSanctionDate">Scheme Sanction Date</label>
-              <input type="date" id="schemeSanctionDate" name="schemeSanctionDate" class="form-control" required>
-            </div>
-            <div class="col-6">
-              <label for="schemeBudget">Scheme Budget</label>
-              <input type="text" id="schemeBudget" name="schemeBudget" class="form-control" required>
-            </div>
-          </div>
-        </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="dateTime">Date and Time</label>
+                  <input type="datetime-local" id="dateTime" name="dateTime" class="form-control" required>
+                </div>
+              </div>
 
-        <div class="col-12">
-          <div class="form-group row">
-            <div class="col-6">
-              <label for="supplyStartDate">Supply Start Date</label>
-              <input type="date" id="supplyStartDate" name="supplyStartDate" class="form-control" required>
-            </div>
-            <div class="col-6">
-              <label for="etcStartDate">ETC Start Date</label>
-              <input type="date" id="etcStartDate" name="etcStartDate" class="form-control" required>
-            </div>
-          </div>
-        </div>
+              <div class="col-12">
+                <div class="form-group row">
+                  <div class="col-6">
+                    <label for="areaAffected">Area Affected</label>
+                    <input type="text" id="areaAffected" name="areaAffected" class="form-control" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="reasonOfFailure">Reason of Failure</label>
+                    <input type="text" id="reasonOfFailure" name="reasonOfFailure" class="form-control" required>
+                  </div>
+                </div>
+              </div>
 
-        <div class="col-12">
-          <div class="form-group row">
-            <div class="col-6">
-              <label for="listOfPlaces">List of Places</label>
-              <input type="text" id="listOfPlaces" name="listOfPlaces" class="form-control" required>
-            </div>
-            <div class="col-6">
-              <label for="progress">Progress (%)</label>
-              <input type="number" id="progress" name="progress" class="form-control" required>
-            </div>
-          </div>
-        </div>
+              <div class="col-12">
+                <div class="form-group row">
+                  <div class="col-6">
+                    <label for="currentStatus">Current Status</label>
+                    <input type="text" id="currentStatus" name="currentStatus" class="form-control" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="irBdNumber">IR and BD Number</label>
+                    <input type="text" id="irBdNumber" name="irBdNumber" class="form-control" required>
+                  </div>
+                </div>
+              </div>
 
-        <div class="col-12">
-          <div class="form-group row">
-            <div class="col-6">
-              <label for="wbsElement">WBS Element</label>
-              <input type="text" id="wbsElement" name="wbsElement" class="form-control" required>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="duration">Duration</label>
+                  <input type="text" id="duration" name="duration" class="form-control" required>
+                </div>
+              </div>
             </div>
-            <div class="col-6">
-              <label for="nameOfAgencies">Name of Agencies</label>
-              <input type="text" id="nameOfAgencies" name="nameOfAgencies" class="form-control" required>
-            </div>
+          </form>
+
+          <div class="popup-footer">
+            <button class="cancel-button" onclick="closePopup()">Cancel</button>
+            <button class="btn btn-primary save-button" onclick="saveData()">Save</button>
           </div>
         </div>
       </div>
-    </form>
-
-    <div class="popup-footer">
-      <button class="cancel-button" onclick="closePopup()">Cancel</button>
-      <button class="btn btn-primary save-button" onclick="saveData()">Save</button>
-    </div>
-  </div>
-</div>
-
-<div class="overflow-x-auto mt-4">
-  <table class="min-w-full bg-white shadow-lg rounded-lg overflow-hidden">
-    <thead>
-      <tr class="bg-gray-300 text-gray-700 uppercase text-sm">
-        <th class="py-3 px-4 border-b text-left">Description</th>
-        <th class="py-3 px-4 border-b text-left">Scheme Sanction No.</th>
-        <th class="py-3 px-4 border-b text-left">Scheme Sanction Date</th>
-        <th class="py-3 px-4 border-b text-left">Scheme Budget</th>
-        <th class="py-3 px-4 border-b text-left">Supply Start Date</th>
-        <th class="py-3 px-4 border-b text-left">ETC Start Date</th>
-        <th class="py-3 px-4 border-b text-left">List of Places</th>
-        <th class="py-3 px-4 border-b text-left">Progress (%)</th>
-        <th class="py-3 px-4 border-b text-left">WBS Element</th>
-        <th class="py-3 px-4 border-b text-left">Name of Agencies</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <!-- Dynamic data will be added here -->
-        <!-- Dynamic data will be added here -->
-            <tr class="hover:bg-gray-100 border-b">
-                <td class="py-2 px-2 sm:px-4">Report 4-RCC to lattice conversion at 220kV GCR Eklakare</td>
-                <td class="py-2 px-2 sm:px-4">123</td>
-                <td class="py-2 px-2 sm:px-4">2024-01-01</td>
-                <td class="py-2 px-2 sm:px-4">10000</td>
-                <td class="py-2 px-2 sm:px-4">2024-01-01</td>
-                <td class="py-2 px-2 sm:px-4">2024-02-01</td>
-                <td class="py-2 px-2 sm:px-4">123kV Mhasarul</td>
-                <td class="py-2 px-2 sm:px-4">50</td>
-                <td class="py-2 px-2 sm:px-4">WBS123</td>
-                <td class="py-2 px-2 sm:px-4">Agency A</td>
+      <div class="overflow-x-auto mt-4">
+        <table class="min-w-full bg-white shadow-lg rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-gray-300 text-gray-700 uppercase text-md">
+              <th class="py-3 px-4 border-b text-left">Description</th>
+              <th class="py-3 px-4 border-b text-left">Area Affected</th>
+              <th class="py-3 px-4 border-b text-left">Date & Time</th>
+              <th class="py-3 px-4 border-b text-left">Reason for Failure</th>
+              <th class="py-3 px-4 border-b text-left">Current Status</th>
+              <th class="py-3 px-4 border-b text-left">IR & BD Number</th>
+              <th class="py-3 px-4 border-b text-left">Duration</th>
             </tr>
-    </tbody>
-  </table>
-</div>
-
+          </thead>
+          <tbody id="tableBody">
+            <!-- Dynamic data will be added here -->
+            <tr class="hover:bg-gray-100 border-b">
+              <td class="py-2 px-4 text-md">TF failure at 132kV Ambad</td>
+              <td class="py-2 px-4 text-md">Warehouse</td>
+              <td class="py-2 px-4 text-md">2024-09-30 16:00</td>
+              <td class="py-2 px-4 text-md">Equipment Malfunction</td>
+              <td class="py-2 px-4 text-md">Completed</td>
+              <td class="py-2 px-4 text-md">IR5678</td>
+              <td class="py-2 px-4 text-md">8to10hr</td>
+            </tr>
+            <tr class="hover:bg-gray-100 border-b">
+              <td class="py-2 px-4 text-md">Break down of 132kV Adgaon-Pimplas line</td>
+              <td class="py-2 px-4 text-md">Warehouse</td>
+              <td class="py-2 px-4 text-md">2024-09-30 16:00</td>
+              <td class="py-2 px-4 text-md">Equipment Malfunction</td>
+              <td class="py-2 px-4 text-md">Completed</td>
+              <td class="py-2 px-4 text-md">IR5678</td>
+              <td class="py-2 px-4 text-md">3to7hr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
   </section>
 
   <script src="script.js"></script>
   <script>
     function openPopup() {
-    document.getElementById('overlay').style.display = 'flex';
-  }
+      document.getElementById('overlay').style.display = 'flex';
+    }
 
-  function closePopup() {
-    document.getElementById('overlay').style.display = 'none';
-  }
+    function closePopup() {
+      document.getElementById('overlay').style.display = 'none';
+    }
 
-  function saveData() {
-    const description = document.getElementById('description').value;
-    const schemeSanctionNo = document.getElementById('schemeSanctionNo').value;
-    const schemeSanctionDate = document.getElementById('schemeSanctionDate').value;
-    const schemeBudget = document.getElementById('schemeBudget').value;
-    const supplyStartDate = document.getElementById('supplyStartDate').value;
-    const etcStartDate = document.getElementById('etcStartDate').value;
-    const listOfPlaces = document.getElementById('listOfPlaces').value;
-    const progress = document.getElementById('progress').value;
-    const wbsElement = document.getElementById('wbsElement').value;
-    const nameOfAgencies = document.getElementById('nameOfAgencies').value;
+    function saveData() {
+      const description = document.getElementById('description').value;
+      const dateTime = document.getElementById('dateTime').value;
+      const areaAffected = document.getElementById('areaAffected').value;
+      const reasonOfFailure = document.getElementById('reasonOfFailure').value;
+      const currentStatus = document.getElementById('currentStatus').value;
+      const irBdNumber = document.getElementById('irBdNumber').value;
+      const duration = document.getElementById('duration').value;
 
-    const tableBody = document.getElementById('tableBody');
-    const newRow = document.createElement('tr');
-    newRow.classList.add('hover:bg-gray-100', 'border-b');
+      const tableBody = document.getElementById('tableBody');
+      const newRow = document.createElement('tr');
+      newRow.classList.add('hover:bg-gray-100', 'border-b');
 
-    const cells = [
-      description,
-      schemeSanctionNo,
-      schemeSanctionDate,
-      schemeBudget,
-      supplyStartDate,
-      etcStartDate,
-      listOfPlaces,
-      progress,
-      wbsElement,
-      nameOfAgencies
-    ];
+      const cells = [
+        description,
+        areaAffected,
+        dateTime,
+        reasonOfFailure,
+        currentStatus,
+        irBdNumber,
+        duration
+      ];
 
-    cells.forEach(cellData => {
-      const newCell = document.createElement('td');
-      newCell.textContent = cellData;
-      newCell.classList.add('py-2', 'px-4', 'text-sm');
-      newRow.appendChild(newCell);
-    });
+      cells.forEach(cellData => {
+        const newCell = document.createElement('td');
+        newCell.textContent = cellData;
+        newCell.classList.add('py-2', 'px-4', 'text-md');
+        newRow.appendChild(newCell);
+      });
 
-    tableBody.appendChild(newRow);
-    closePopup();
-    document.getElementById('customerForm').reset();
-  }
+      tableBody.appendChild(newRow);
+
+      closePopup();
+      document.getElementById('customerForm').reset();
+    }
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {

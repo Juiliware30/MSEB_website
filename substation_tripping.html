@@ -142,10 +142,9 @@
     </a>
     <ul class="side-menu top">
         <li class="active">
-             <a href="index.html" class="menu-link">
+            <a href="index.html">
                 <i class='bx bxs-dashboard' style="font-weight: bold;"></i>
                 <span class="text">Dashboard</span>
-                <!-- <i class='bx bx-chevron-down arrow'></i> -->
             </a>
         </li>
         <li>
@@ -208,6 +207,14 @@
     </ul>
 </section>
 
+<style>
+    /* CSS for responsive sidebar */
+    @media (max-width: 576px) { /* Target small screens */
+        .side-menu .text {
+            display: none; /* Hide text on small screens */
+        }
+    }
+</style>
 
 <section id="content">
     <nav>
